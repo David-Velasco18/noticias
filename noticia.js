@@ -6,8 +6,7 @@ const boton = document.getElementById('boton-refrescar');
 boton.addEventListener ('click', cargarnoticias);
 function cargarnoticias(){
     console.log("Botón conectado");
-    const urlGNews = 'https://gnews.io/api/v4/top-headlines?category=general&lang=es&apikey=bb012ed3567af30afd984601e626332f';
-    const url = `https://api.allorigins.win/raw?url=${encodeURIComponent(urlGNews)}`;
+    const url = 'https://gnews.io/api/v4/top-headlines?category=general&lang=es&apikey=bb012ed3567af30afd984601e626332f';
     fetch (url)
     .then(response => response.json())
     .then(data => {console.log(data)
